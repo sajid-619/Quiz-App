@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.quizapp.MainActivity"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/question_linear_layout">
+
+            <TextView
+                style="@style/question_textviews"
+                android:text="Who invented Boolean Algebra?"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/q_one_group">
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_one_a"
+                    android:text="George Boole"
+                    android:layout_marginTop="10dp"
+                    android:onClick="questionOneAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_one_b"
+                    android:text="Henry Boole"
+                    android:layout_marginTop="2dp"
+                    android:onClick="questionOneAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_one_c"
+                    android:text="Frederick Boole"
+                    android:layout_marginTop="2dp"
+                    android:onClick="questionOneAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_one_d"
+                    android:layout_marginTop="2dp"
+                    android:text="Linus Torvalds"
+                    android:onClick="questionOneAnswered"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/question_linear_layout"
+            android:id="@+id/checkbox_question">
+
+            <TextView
+                style="@style/question_textviews"
+                android:text="Which of the following people created the Java programming language?"/>
+
+            <CheckBox
+                style="@style/checkbox_answers"
+                android:id="@+id/q_two_a"
+                android:text="James Gosling"
+                android:onClick="questionTwoAnswered"/>
+            <CheckBox
+                style="@style/checkbox_answers"
+                android:id="@+id/q_two_b"
+                android:text="Mike Sheridan"
+                android:onClick="questionTwoAnswered"/>
+            <CheckBox
+                style="@style/checkbox_answers"
+                android:id="@+id/q_two_c"
+                android:text="Steve Wozniak"
+                android:onClick="questionTwoAnswered"/>
+            <CheckBox
+                style="@style/checkbox_answers"
+                android:id="@+id/q_two_d"
+                android:text="Patrick Naughton"
+                android:onClick="questionTwoAnswered"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/question_linear_layout">
+
+            <TextView
+                style="@style/question_textviews"
+                android:text="What year was the first Apple computer released?"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/q_three_group">
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:text="1982"
+                    android:onClick="questionThreeAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:text="1972"
+                    android:onClick="questionThreeAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:text="1980"
+                    android:onClick="questionThreeAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_three_d"
+                    android:text="1976"
+                    android:onClick="questionThreeAnswered"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/question_linear_layout">
+
+            <TextView
+                style="@style/question_textviews"
+                android:text="What does dp in Android stand for?"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/q_four_group">
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:text="Dense performance"
+                    android:onClick="questionFourAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:id="@+id/q_four_b"
+                    android:text="Density Independent"
+                    android:onClick="questionFourAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:text="Deeper Pixels"
+                    android:onClick="questionFourAnswered"/>
+
+                <RadioButton
+                    style="@style/radio_buttons"
+                    android:text="Done Poorly"
+                    android:onClick="questionFourAnswered"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/question_linear_layout">
+
+            <TextView
+                style="@style/question_textviews"
+                android:text="What year was the Swift programming language released?"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/q_five_answer"
+                    android:layout_marginTop="12dp"
+                    android:hint="Year"
+                    android:inputType="number"/>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="14dp"
+                android:onClick="submitAnswersTapped"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="#ffffff"
+                android:text="Submit"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
